@@ -23,6 +23,7 @@ public final class FreeRank extends JavaPlugin {
         this.freeRankAdmin = new FreeRankAdmin();
         this.freeRankAdmin.load();
         Util.log("");
+        Util.log("&bFreeRank &7| &3Koala Community");
         Util.log("");
         Util.log("");
     }
