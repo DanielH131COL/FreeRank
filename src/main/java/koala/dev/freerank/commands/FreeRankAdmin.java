@@ -12,16 +12,16 @@ public class FreeRankAdmin {
 
     public void save() {
         FileConfig config = FreeRank.get().getMainConfig();
-        config.getConfiguration().set("claimed_players", this.claimedplayers);
-        config.getConfiguration().set("can_claim", Boolean.valueOf(isClaimable()));
+        config.getConfiguration().set("CLAIMED_PLAYERS", this.claimedplayers);
+        config.getConfiguration().set("CAN_CLAIM", Boolean.valueOf(isClaimable()));
         config.save();
         config.reload();
     }
 
     public void load() {
         FileConfig config = FreeRank.get().getMainConfig();
-        this.claimedplayers = new ArrayList<>(config.getStringList("claimed_players"));
-        this.canclaim = config.getBoolean("can_claim");
+        this.claimedplayers = new ArrayList<>(config.getStringList("CLAIMED_PLAYERS"));
+        this.canclaim = config.getBoolean("CAN_CLAIM");
     }
 
     public boolean isReclaimed(String name) {

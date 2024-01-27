@@ -66,11 +66,4 @@ public final class FreeRank extends JavaPlugin {
         this.freeRankAdmin = freeRankAdmin;
     }
 
-    public static FreeRank getInstance() {
-        return instance;
-    }
-
-    public Object getCommandMap() {
-        return get().getCommandMap();
-    }
 }
