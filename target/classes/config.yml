@@ -2,7 +2,10 @@ COMMAND: "lp user %player% parent set %rank%"
 RANK: "donator"
 
 MESSAGE:
-  CLAIMED: "&aYou have claimed your free rank."
+  CLAIMED:
+    - "&7&m---------------"
+    - "&fYou have reclamed you &bFree rank &fuse this &b/freerank"
+    - "&7&m---------------"
   ALREADY: "&cYou have already claimed your free rank."
   DISABLED: "&cThe Free Rank is currently disabled."
 

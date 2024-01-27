@@ -3,6 +3,9 @@ package koala.dev.freerank.utils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class CC {
 
     public static String translate(String s) {
@@ -11,10 +14,6 @@ public class CC {
 
     public static void log(String text) {
         Bukkit.getConsoleSender().sendMessage(translate(text));
-    }
-
-    private void Util() {
-        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 
 }

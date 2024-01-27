@@ -16,12 +16,12 @@ public class FreeRankCommand {
         Player player = cmd.getPlayer();
         String[] args = cmd.getArgs();
         FreeRankAdmin whitelist = FreeRank.get().getfreeRankAdmin();
-        if (FreeRank.get().getMainConfig().getBoolean("CLAIMED_PLAYERS")) {
+        if (FreeRank.get().getMainConfig().getBoolean("CAN-CLAIM")) {
             if (!whitelist.isReclaimed(player.getName())) {
                 Bukkit.getServer().dispatchCommand((CommandSender)Bukkit.getServer().getConsoleSender(), FreeRank.get().getMainConfig().getString("COMMAND")
                         .replace("%player%", player.getName())
                         .replace("%rank%", FreeRank.get().getMainConfig().getString("RANK")));
-                player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("MESSAGE.CLAIMED")));
+                Bukkit.broadcastMessage(CC.translate(FreeRank.get().getMainConfig().getString("MESSAGE.CLAIMED")));
                 whitelist.addReclaimed(player.getName());
             } else {
                 player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("MESSAGE.ALREADY")));

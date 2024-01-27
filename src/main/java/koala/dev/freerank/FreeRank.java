@@ -23,7 +23,9 @@ public final class FreeRank extends JavaPlugin {
         CC.log("");
         CC.log("&bFreeRank &7| &3Koala Community");
         CC.log("");
-        CC.log("&bAuthor&7: ");
+        CC.log("&bAuthor&7: &f" + getDescription().getAuthors());
+        CC.log("&bVersion&7: &f" + getDescription().getVersion());
+        CC.log("&bDiscord&7: &fhttps://discord.gg/rkkU9xjy");
         CC.log("");
     }
     public void registerCommands() {
