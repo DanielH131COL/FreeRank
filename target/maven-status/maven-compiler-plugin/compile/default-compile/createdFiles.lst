@@ -3,7 +3,6 @@ koala\dev\freerank\utils\FileConfig.class
 koala\dev\freerank\FreeRank.class
 koala\dev\freerank\utils\commands\Command.class
 koala\dev\freerank\commands\freerank\FreeRankCommand.class
-koala\dev\freerank\utils\Util.class
 koala\dev\freerank\utils\CC.class
 koala\dev\freerank\commands\FreeRankAdmin.class
 koala\dev\freerank\utils\commands\Completer.class

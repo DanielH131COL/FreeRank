@@ -18,14 +18,16 @@ public class FreeRankCommand {
         FreeRankAdmin whitelist = FreeRank.get().getfreeRankAdmin();
         if (FreeRank.get().getMainConfig().getBoolean("CLAIMED_PLAYERS")) {
             if (!whitelist.isReclaimed(player.getName())) {
-                Bukkit.getServer().dispatchCommand((CommandSender)Bukkit.getServer().getConsoleSender(), FreeRank.get().getMainConfig().getString("COMMAND").replace("%player%", player.getName()));
-                player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("CLAIMED_MESSAGE")));
+                Bukkit.getServer().dispatchCommand((CommandSender)Bukkit.getServer().getConsoleSender(), FreeRank.get().getMainConfig().getString("COMMAND")
+                        .replace("%player%", player.getName())
+                        .replace("%rank%", FreeRank.get().getMainConfig().getString("RANK")));
+                player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("MESSAGE.CLAIMED")));
                 whitelist.addReclaimed(player.getName());
             } else {
-                player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("ALREADY_CLAIMED_MESSAGE")));
+                player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("MESSAGE.ALREADY")));
             }
         } else {
-            player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("DISABLED_MESSAGE")));
+            player.sendMessage(CC.translate(FreeRank.get().getMainConfig().getString("MESSAGE.DISABLED")));
         }
     }
 }

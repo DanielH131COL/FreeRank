@@ -1,8 +1,13 @@
-COMMAND: "lp user %player% Kaseya parent set donator"
-CLAIMED_MESSAGE: "&aYou have claimed your free rank."
-ALREADY_CLAIMED_MESSAGE: "&cYou have already claimed your free rank."
-DISABLED_MESSAGE: "&cThe Free Rank is currently disabled."
+COMMAND: "lp user %player% parent set %rank%"
+RANK: "donator"
 
-CAN_CLAIM: true
-CLAIMED_PLAYERS: {}
+MESSAGE:
+  CLAIMED: "&aYou have claimed your free rank."
+  ALREADY: "&cYou have already claimed your free rank."
+  DISABLED: "&cThe Free Rank is currently disabled."
+
+CAN-CLAIM: true
+CLAIMED:
+  PLAYERS: {}
+
 

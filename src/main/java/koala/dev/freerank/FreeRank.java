@@ -2,16 +2,14 @@ package koala.dev.freerank;
 
 import koala.dev.freerank.commands.FreeRankAdmin;
 import koala.dev.freerank.commands.freerank.FreeRankCommand;
-import koala.dev.freerank.utils.Util;
+import koala.dev.freerank.utils.CC;
 import koala.dev.freerank.utils.FileConfig;
 import koala.dev.freerank.utils.commands.CommandFramework;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Arrays;
 
 public final class FreeRank extends JavaPlugin {
-    public static FreeRank instance;
 
     private FileConfig mainConfig;
 
@@ -22,11 +20,11 @@ public final class FreeRank extends JavaPlugin {
         registerCommands();
         this.freeRankAdmin = new FreeRankAdmin();
         this.freeRankAdmin.load();
-        Util.log("");
-        Util.log("&bFreeRank &7| &3Koala Community");
-        Util.log("");
-        Util.log("&bAuthor&7: ");
-        Util.log("");
+        CC.log("");
+        CC.log("&bFreeRank &7| &3Koala Community");
+        CC.log("");
+        CC.log("&bAuthor&7: ");
+        CC.log("");
     }
     public void registerCommands() {
         this.registerCommands(
@@ -38,13 +36,12 @@ public final class FreeRank extends JavaPlugin {
     }
 
     public void onDisable() {
-        Util.log("");
+        CC.log("");
     }
 
     private void loadConfig() {
         this.mainConfig = new FileConfig(this, "config.yml");
     }
-
 
     public static FreeRank get() {
         return (FreeRank)getPlugin(FreeRank.class);
@@ -56,14 +53,6 @@ public final class FreeRank extends JavaPlugin {
 
     public FreeRankAdmin getfreeRankAdmin() {
         return this.freeRankAdmin;
-    }
-
-    public void setMainConfig(FileConfig mainConfig) {
-        this.mainConfig = mainConfig;
-    }
-
-    public void setFreeRankAdmin(FreeRankAdmin freeRankAdmin) {
-        this.freeRankAdmin = freeRankAdmin;
     }
 
 }
