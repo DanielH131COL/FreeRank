@@ -23,6 +23,8 @@ public final class FreeRank extends JavaPlugin {
         this.freeRankAdmin = new FreeRankAdmin();
         this.freeRankAdmin.load();
         Util.log("");
+        Util.log("");
+        Util.log("");
     }
     public void registerCommands() {
         this.registerCommands(
