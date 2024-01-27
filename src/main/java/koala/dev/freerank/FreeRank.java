@@ -25,7 +25,7 @@ public final class FreeRank extends JavaPlugin {
         Util.log("");
         Util.log("&bFreeRank &7| &3Koala Community");
         Util.log("");
-        Util.log("");
+        Util.log("&bAuthor&7: ");
         Util.log("");
     }
     public void registerCommands() {
