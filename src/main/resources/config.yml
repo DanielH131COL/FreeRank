@@ -3,9 +3,7 @@ RANK: "donator"
 
 MESSAGE:
   CLAIMED:
-    - "&7&m---------------"
     - "&fYou have reclamed you &bFree rank &fuse this &b/freerank"
-    - "&7&m---------------"
   ALREADY: "&cYou have already claimed your free rank."
   DISABLED: "&cThe Free Rank is currently disabled."
 
